@@ -14,9 +14,9 @@ namespace mock.webapi.Services
         public async Task<double> GetGoldPriceAsync()
         {
             // Örnek: GoldAPI.io kullanımı
-            _httpClient.DefaultRequestHeaders.Add("x-access-token", "goldapi-fwpichsmg8bfg2t-io");
+            //_httpClient.DefaultRequestHeaders.Add("x-access-token", "goldapi-fwpichsmg8bfg2t-io");
 
-            var response = await _httpClient.GetAsync("https://www.goldapi.io/api/XAU/USD");
+            var response = await _httpClient.GetAsync("https://api.gold-api.com/price/XAU");
             response.EnsureSuccessStatusCode();
 
             var json = await response.Content.ReadAsStringAsync();
