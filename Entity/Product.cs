@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Mock
+namespace mock.webapi.Entity
 {
     public class Product
     {

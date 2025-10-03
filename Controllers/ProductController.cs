@@ -1,13 +1,14 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Mock.Services;
+using mock.webapi.Entity;
+using mock.webapi.Services;
 using System.Text.Json;
 
-namespace Mock.Controllers
+namespace mock.webapi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class HomeController : ControllerBase
+    public class ProductController : ControllerBase
     {
         // GET: ApiController
         [HttpGet]
@@ -26,13 +27,6 @@ namespace Mock.Controllers
             }
 
             return Ok(products);
-        }
-
-
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
-        {
-            return Ok(new { Message = $"You requested item with ID: {id}" });
         }
     }
 }
